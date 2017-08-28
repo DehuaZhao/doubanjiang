@@ -33,7 +33,7 @@ api.douban.com/v2/movie/subject/25980443
 
 ## How this extension works
 
-将**[豆瓣酱][doubanjiang-ext-page]**添加到 Chrome 后它将自动转换豆瓣电影详情页面上的评分，并在原评分的右侧显示转换后的分数。
+将[**豆瓣酱**][doubanjiang-ext-page]添加到 Chrome 后它将自动转换豆瓣电影详情页面上的评分，并在原评分的右侧显示转换后的分数。
 
 
 [readme-en]: https://github.com/DehuaZhao/doubanjiang/blob/master/README_en.md

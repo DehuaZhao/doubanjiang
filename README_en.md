@@ -6,9 +6,9 @@ A Chrome extension for Douban Movie rating correction.
 
 ## Why this project
 
-This extension converts Douban Movie user's ratings into a more reasonable coordinate.
+This extension converts ratings from Douban Movie users into a more reasonable coordinate.
 
-As you could do some calculation yourself with the following json example. The current movie score is __weighted average user stars from 0 to 5, then multiply by 2__, which means translating star{one, two, three, four, five} into points{2, 4, 6, 8, 10}. And what this extension does, is translate those stars into points{0, 0.25, 5, 7.5, 10}.
+As you can see from the following JSON from Douban Movie API, the current score is done by calculating __weighted average user stars then multiply it by 2__. By doing that, the stars ranging from 1 to 5 are translated into points in the set {2, 4, 6, 8, 10}. However, the stars are supposed to be mapped into the range of {0, 0.25, 5, 7.5, 10}. This extension provides such a way to perform the desired transformation.
 
 api.douban.com/v2/movie/subject/25980443
 ```json
@@ -29,11 +29,11 @@ api.douban.com/v2/movie/subject/25980443
 }
 ```
 
-Amusingly enough, in an [article by the CEO of Douban.com (in Chinese)][douban-movie-qna], he claims that Movie rating is translated into 0-10 from the original user stars. Unfortunately, that is not how they implement this.
+Ironically, the CEO of Douban.com claimed in an [article (in Chinese)][douban-movie-qna], the movie ratings on Douban is translated into the scale of 0 to 10 from the original stars that users give out. Unfortunately, that is not exactly how they implement this.
 
 ## How this extension works
 
-Add __[doubanjiang][doubanjiang-ext-page]__ to Chrome. It will auto convert using ratings shown at movie info page at movie.douban.com, putting the translated score at right side of the original score.
+Add __[doubanjiang][doubanjiang-ext-page]__ to Chrome. It will automatically put a corrected score on the right-hand side of the original score at every Douban Movie info page.
 
 
 [readme-zh]: https://github.com/DehuaZhao/doubanjiang/blob/master/README.md
