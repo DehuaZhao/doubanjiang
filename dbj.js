@@ -3,7 +3,8 @@ var oriRatingElem = document.getElementsByClassName('ll rating_num');
 var oriRating = oriRatingElem[0].outerText;
 
 // converted rating
-var cvtRating = (oriRating - 2) / 4 * 5;
+
+var cvtRating = (oriRating * 10 - 2 * 10) * 5 / 4 / 10;
 
 var cvrtElem = document.createElement('div');
 cvrtElem.appendChild(document.createTextNode(cvtRating));

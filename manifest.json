@@ -1,11 +1,12 @@
 {
   "manifest_version": 2,
 
+  "version": "1.4",
+
   "default_locale": "zh_CN",
 
   "name": "__MSG_extName__",
   "description": "__MSG_extDesc__",
-  "version": "1.0",
 
   "browser_action": {
     "default_icon": "star.png"
